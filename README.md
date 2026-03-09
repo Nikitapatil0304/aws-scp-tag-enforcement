@@ -85,7 +85,7 @@ This ensures that users must provide all mandatory tags during instance creation
 
 ---
 
-# SCP Policy Example
+# SCP Policy 
 
 ```json
 {
@@ -107,8 +107,32 @@ This ensures that users must provide all mandatory tags during instance creation
     }
   ]
 }
-```
 
+## Tags policy
+{
+    "tags": {
+        "Name": {
+            "tag_key": {
+                "@@assign": "Name"
+            }
+        },
+        "emailID": {
+            "tag_key": {
+                "@@assign": "emailID"
+            }
+        },
+        "phoneNo": {
+            "tag_key": {
+                "@@assign": "phoneNo"
+            }
+        },
+        "Place": {
+            "tag_key": {
+                "@@assign": "Place"
+            }
+        }
+    }
+}
 ---
 
 # Validation
