@@ -1,5 +1,3 @@
----
-
 # Enterprise Tag Governance Enforcement using AWS Tag Policies
 
 ## Project Overview
