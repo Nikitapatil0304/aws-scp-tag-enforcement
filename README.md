@@ -9,7 +9,12 @@ This project demonstrates how to enforce **enterprise tagging standards** for AW
 The goal of this project is to **prevent EC2 instances from launching unless mandatory tags are provided**.
 This helps organizations maintain proper **resource ownership, cost allocation, and compliance standards**.
 
-The implementation uses **AWS Organizations, Service Control Policies (SCP), IAM Policies, and EC2**.
+The implementation uses:
+
+* AWS Organizations
+* Service Control Policies (SCP)
+* IAM Policies
+* Amazon EC2
 
 ---
 
@@ -33,7 +38,7 @@ This caused several problems:
 * Cost allocation reports were inaccurate
 * Compliance audits failed due to missing metadata
 
-To solve this problem, the cloud governance team implemented a policy that:
+To solve this problem, the cloud governance team implemented a policy:
 
 > **No EC2 instance should be launched without mandatory tags.**
 
@@ -164,6 +169,8 @@ This ensures that users **must include required tags when launching an instance*
 
 Two test scenarios were performed to validate the tagging enforcement.
 
+---
+
 ## Test 1 – Launch EC2 Without Tags
 
 ### Steps
@@ -191,10 +198,10 @@ Explicit deny in Service Control Policy.
 2. Click **Launch Instance**
 3. Add required tags:
 
-   * Name
-   * emailID
-   * phoneNo
-   * Place
+* Name
+* emailID
+* phoneNo
+* Place
 
 ### Result
 
@@ -248,45 +255,45 @@ Instance Created (Only if tags exist)
 
 # Screenshots
 
-Add screenshots to demonstrate the implementation.
+## AWS Organization
 
-Example structure:
+<img width="1366" height="768" src="https://github.com/user-attachments/assets/c5f4a141-d0c9-40d5-86cb-285f04567830"/>
 
-```
-screenshots/
+---
 
-scp-policy
+## SCP Policy Creation
 
-<img width="1366" height="768" alt="Screenshot (23)" src="https://github.com/user-attachments/assets/f83a461a-2e88-4457-b32b-7f04921fb83c" />
+<img width="1366" height="768" src="https://github.com/user-attachments/assets/f83a461a-2e88-4457-b32b-7f04921fb83c"/>
 
-tag-policy
+---
 
-<img width="1366" height="768" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/950bf595-25b5-4568-8eaf-cf8edfc0fc7a" />
+## Tag Policy
 
+<img width="1366" height="768" src="https://github.com/user-attachments/assets/950bf595-25b5-4568-8eaf-cf8edfc0fc7a"/>
 
-organization
+---
 
-<img width="1366" height="768" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/c5f4a141-d0c9-40d5-86cb-285f04567830" />
+## EC2 Launch Without Tags (Failure)
 
+<img width="1366" height="768" src="https://github.com/user-attachments/assets/e6fb07e7-fd43-4223-99bc-8bff0df430a7"/>
 
-ec2-launch-without-tag
+---
 
-<img width="1366" height="768" alt="Screenshot (25)" src="https://github.com/user-attachments/assets/e6fb07e7-fd43-4223-99bc-8bff0df430a7" />
+## Adding Required Tags
 
+<img width="1366" height="447" src="https://github.com/user-attachments/assets/9a6089ab-2f94-48c2-adcb-8971702ddc9c"/>
 
-adding-tags
+---
 
-<img width="1366" height="447" alt="Screenshot (26)" src="https://github.com/user-attachments/assets/9a6089ab-2f94-48c2-adcb-8971702ddc9c" />
+## EC2 Launch With Required Tags
 
+<img width="1366" height="717" src="https://github.com/user-attachments/assets/f0477a86-9bb3-45b8-a3a0-3ddcf08eaa44"/>
 
-ec2-launch-with-tags
+---
 
-<img width="1366" height="717" alt="Screenshot (29)" src="https://github.com/user-attachments/assets/f0477a86-9bb3-45b8-a3a0-3ddcf08eaa44" />
+## EC2 Instance Running With Tags
 
-<img width="1366" height="768" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/78ad14d6-a4a3-409c-b721-8d4aaeb9e017" />
-
-
-```
+<img width="1366" height="768" src="https://github.com/user-attachments/assets/78ad14d6-a4a3-409c-b721-8d4aaeb9e017"/>
 
 ---
 
@@ -303,7 +310,12 @@ ec2-launch-with-tags
 
 This project demonstrates how organizations can enforce **enterprise tagging standards** using AWS governance tools.
 
-By enforcing mandatory tags during resource creation, organizations can improve **cost tracking, compliance, resource ownership, and operational governance** across their AWS environments.
+By enforcing mandatory tags during resource creation, organizations can improve:
+
+* Cost tracking
+* Compliance
+* Resource ownership
+* Operational governance
 
 ---
 
