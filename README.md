@@ -233,6 +233,8 @@ Ensures that cloud resources follow organizational standards.
 
 # Project Architecture
 
+<img width="1536" height="1024" alt="Architecture Diagram jpg" src="https://github.com/user-attachments/assets/7ce74475-e7bd-4d33-931b-280dd5136ebb" />
+
 ```
 User
    ↓
